@@ -21,4 +21,4 @@
     nginx         latest    87a94228f133   6 days ago    133MB
     hello-world   latest    feb5d9fea6a5   3 weeks ago   13.3kB
 
-    c) 
+    c) root@debian:/home/dakeinu/Documents/DevOps# touch index.html
