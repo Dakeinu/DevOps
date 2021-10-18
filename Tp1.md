@@ -22,3 +22,5 @@
     hello-world   latest    feb5d9fea6a5   3 weeks ago   13.3kB
 
     c) root@debian:/home/dakeinu/Documents/DevOps# touch index.html
+
+    d) docker run -it --rm -d -p 8080:80 --name web -v /home/dakeinu/Documents/DevOps:/usr/share/nginx/html nginx
