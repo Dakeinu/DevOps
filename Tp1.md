@@ -1,7 +1,7 @@
 ## TP 1 ##
 
 3. Exécuter un serveur web (apache, nginx, …) dans un conteneur docker
-    a) root@debian:/home/dakeinu# docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+    a) root@debian:/home/dakeinu# docker run it --rm -d -p 8080:80 --name some-nginx -v /some/content:/usr/share/nginx/html -d nginx
     
     Unable to find image 'nginx:latest' locally
     latest: Pulling from library/nginx
@@ -24,3 +24,5 @@
     c) root@debian:/home/dakeinu/Documents/DevOps# touch index.html
 
     d) docker run -it --rm -d -p 8080:80 --name web -v /home/dakeinu/Documents/DevOps:/usr/share/nginx/html nginx
+
+    e) docker cp Documents/DevOps some-nginx:/usr/share/nginx/html/
