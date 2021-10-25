@@ -26,3 +26,6 @@
     d) docker run -it --rm -d -p 8080:80 --name web -v /home/dakeinu/Documents/DevOps:/usr/share/nginx/html nginx
 
     e) docker cp Documents/DevOps some-nginx:/usr/share/nginx/html/
+
+4. Builder ue image
+    a) 
