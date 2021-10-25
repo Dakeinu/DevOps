@@ -28,4 +28,8 @@
     e) docker cp Documents/DevOps some-nginx:/usr/share/nginx/html/
 
 4. Builder ue image
-    a) 
+    a) docker build -t my-docker-file .
+
+    b) docker run -d -p 8080:8080 my-docker-file
+
+    c) Le résultat final est le même qu'avec la version précédente cependant celle ci est plus rapide d'execution.
