@@ -1,0 +1,37 @@
+---
+version: "3.9"
+services:
+  db:
+    image: mysql
+    ports:
+      - 3306:3306
+    networks:
+      - default_network
+    environment:
+      - MYSQL_ROOT_PASSWORD=my-secret
+      - MYSQL_DATABASE=ynov 
+      - MYSQL_USER=user 
+      - MYSQL_PASSWORD=pwd
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    networks:
+      - default_network
+    environment:
+      - PMA_HOST=db
+  webapp:
+    image: nginx
+    ports:
+      - "8000:8000"
+    volumes:
+      - "/data"
+  app:
+    image: wordpress
+    ports:
+      - "4443"
+    volumes:
+      - "data"
+
+networks:
+  default_network:
